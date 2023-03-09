@@ -4,7 +4,7 @@
         <h3 class="contacto__title">{{ titulo }}</h3>
 
         <input class="contacto__input" type="email" placeholder="Ingrese su email">
-        <textarea class="contacto__textarea" placeholder="Ingrese su mensaje" cols="30" rows="10"></textarea>
+        <textarea class="contacto__textarea" placeholder="Ingrese su mensaje" cols="60" rows="7"></textarea>
 
         <button class="contacto__btn">Enviar</button>
     </div>

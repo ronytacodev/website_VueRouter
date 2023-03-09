@@ -4,24 +4,24 @@
 
     <ul class="header__list">
       <li class="header__list__item">
-        <a class="header__list__link" href="#">Cursos</a>
+        <a @click="mostrarComponente('lista-cursos', 'Lista de Cursos')" class="header__list__link" href="#">Cursos</a>
       </li>
 
       <li class="header__list__item">
-        <a class="header__list__link" href="#">Profesores</a>
+        <a @click="mostrarComponente('lista-profesores', 'Lista de Profesores')" class="header__list__link"
+          href="#">Profesores</a>
       </li>
 
       <li class="header__list__item">
-        <a class="header__list__link" href="#">Contacto</a>
+        <a @click="mostrarComponente('contacto-cursos', 'Formulario de Contacto')" class="header__list__link"
+          href="#">Contacto</a>
       </li>
     </ul>
   </div>
 
-  <div>
-    <lista-cursos titulo="Lista de cursos" />
-    <lista-profesores titulo="Lista de profesores" />
-    <contacto-cursos titulo="Formulario de Contacto" />
-  </div>
+  <keep-alive>
+    <component :is="componentSelect" :titulo="propComponent"></component>
+  </keep-alive>
 </template>
 
 <script>
@@ -32,10 +32,22 @@ import ContactoCursos from './components/cursos/ContactoCursos.vue';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      componentSelect: null,
+      propComponent: ''
+    }
+  },
   components: {
     ListaCursos,
     ListaProfesores,
     ContactoCursos
+  },
+  methods: {
+    mostrarComponente: function (componente, propiedad) {
+      this.componentSelect = componente,
+        this.propComponent = propiedad
+    }
   }
 }
 </script>
