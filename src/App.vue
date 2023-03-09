@@ -1,6 +1,5 @@
 <template>
   <div class="header">
-
     <h3 class="header__title">Edutech Cursos</h3>
 
     <ul class="header__list">
@@ -17,15 +16,20 @@
       </li>
     </ul>
   </div>
+
+  <div>
+    <lista-cursos />
+  </div>
 </template>
 
 <script>
 
+import ListaCursos from './components/cursos/ListaCursos.vue';
 
 export default {
   name: 'App',
   components: {
-
+    ListaCursos
   }
 }
 </script>
