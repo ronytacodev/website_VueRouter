@@ -1,17 +1,23 @@
 <template>
     <div class="alumnos">
         <div class="alumnos__left">
-            aqui va un menu
+            <menu-cursos />
         </div>
         <div class="alumnos__right">
-            aqui van las opciones del menu
+            <router-view />
         </div>
     </div>
 </template>
 
 <script>
+
+import MenuCursos from '@/components/cursos/MenuCursos.vue';
+
 export default {
-    name: 'AlumnosPage'
+    name: 'AlumnosPage',
+    components: {
+        MenuCursos
+    }
 }
 </script>
 

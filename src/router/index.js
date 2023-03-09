@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import CursosPage from '@/views/CursosPage'
 import ProfesoresPage from '@/views/ProfesoresPage'
 import AlumnosPage from '@/views/alumnos/AlumnosPage'
+import AlumnosA from '@/views/alumnos/AlumnosA'
+import AlumnosB from '@/views/alumnos/AlumnosB'
+import AlumnosC from '@/views/alumnos/AlumnosC'
 
 const routes = [
   {
@@ -18,8 +21,26 @@ const routes = [
   { 
     path: '/alumnos',
     component: AlumnosPage,
-    name: 'alumnos'
-  }
+    name: 'alumnos',
+    children: [
+      { 
+        path: 'alumnos-a',
+        component: AlumnosA,
+        name: 'alumnos-a'
+      },
+      { 
+        path: 'alumnos-b',
+        component: AlumnosB,
+        name: 'alumnos-b'
+      },
+      { 
+        path: 'alumnos-c',
+        component: AlumnosC,
+        name: 'alumnos-c'
+      }
+    ]
+  },
+
 ]
 
 const router = createRouter({
