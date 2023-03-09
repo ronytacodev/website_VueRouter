@@ -1,5 +1,6 @@
 <template>
     <div class="cursos">
+        <h3>{{ titulo }}</h3>
         <v-lista :lista="lista" />
     </div>
 </template>
@@ -10,6 +11,9 @@ import VLista from '../base/VLista.vue';
 
 export default {
     name: 'ListaCursos',
+    props: {
+        titulo: String
+    },
     components: {
         VLista
     },

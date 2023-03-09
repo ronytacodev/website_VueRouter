@@ -4,22 +4,23 @@
 
     <ul class="header__list">
       <li class="header__list__item">
-        <a class="header__list__link" href="#">Opción 1</a>
+        <a class="header__list__link" href="#">Cursos</a>
       </li>
 
       <li class="header__list__item">
-        <a class="header__list__link" href="#">Opción 2</a>
+        <a class="header__list__link" href="#">Profesores</a>
       </li>
 
       <li class="header__list__item">
-        <a class="header__list__link" href="#">Opción 3</a>
+        <a class="header__list__link" href="#">Contacto</a>
       </li>
     </ul>
   </div>
 
   <div>
-    <lista-cursos />
-    <lista-profesores />
+    <lista-cursos titulo="Lista de cursos" />
+    <lista-profesores titulo="Lista de profesores" />
+    <contacto-cursos titulo="Formulario de Contacto" />
   </div>
 </template>
 
@@ -27,12 +28,14 @@
 
 import ListaCursos from './components/cursos/ListaCursos.vue';
 import ListaProfesores from './components/cursos/ListaProfesores.vue';
+import ContactoCursos from './components/cursos/ContactoCursos.vue';
 
 export default {
   name: 'App',
   components: {
     ListaCursos,
-    ListaProfesores
+    ListaProfesores,
+    ContactoCursos
   }
 }
 </script>
