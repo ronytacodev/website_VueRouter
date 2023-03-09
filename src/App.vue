@@ -19,17 +19,20 @@
 
   <div>
     <lista-cursos />
+    <lista-profesores />
   </div>
 </template>
 
 <script>
 
 import ListaCursos from './components/cursos/ListaCursos.vue';
+import ListaProfesores from './components/cursos/ListaProfesores.vue';
 
 export default {
   name: 'App',
   components: {
-    ListaCursos
+    ListaCursos,
+    ListaProfesores
   }
 }
 </script>

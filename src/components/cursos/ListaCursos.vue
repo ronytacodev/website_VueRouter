@@ -1,16 +1,18 @@
 <template>
     <div class="cursos">
-        <ul class="cursos__lista">
-            <li v-for="elemento in lista" :key="elemento.id">
-                {{ elemento.name }}
-            </li>
-        </ul>
+        <v-lista :lista="lista" />
     </div>
 </template>
 
 <script>
+
+import VLista from '../base/VLista.vue';
+
 export default {
     name: 'ListaCursos',
+    components: {
+        VLista
+    },
     data() {
         return {
             lista: [
@@ -21,6 +23,7 @@ export default {
             ]
         }
     },
+
 }
 </script>
 
