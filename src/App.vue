@@ -1,26 +1,57 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="header">
+
+    <h3 class="header__title">Edutech Cursos</h3>
+
+    <ul class="header__list">
+      <li class="header__list__item">
+        <a class="header__list__link" href="#">Opción 1</a>
+      </li>
+
+      <li class="header__list__item">
+        <a class="header__list__link" href="#">Opción 2</a>
+      </li>
+
+      <li class="header__list__item">
+        <a class="header__list__link" href="#">Opción 3</a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  padding: 1em;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    &__item {
+      padding: 1em;
+    }
+  }
 }
 </style>
