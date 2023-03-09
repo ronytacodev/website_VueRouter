@@ -1,19 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import ListaCursos from '@/components/cursos/ListaCursos'
-
-import ListaProfesores from '@/components/cursos/ListaProfesores'
+import CursosPage from '@/views/CursosPage'
+import ProfesoresPage from '@/views/ProfesoresPage'
+import AlumnosPage from '@/views/alumnos/AlumnosPage'
 
 const routes = [
   {
     path: '/cursos',
-    component: ListaCursos,
+    component: CursosPage,
     name: 'cursos'
   },
   {
     path: '/profesores',
-    component: ListaProfesores,
+    component: ProfesoresPage,
     name: 'profesores'
+  },
+  { 
+    path: '/alumnos',
+    component: AlumnosPage,
+    name: 'alumnos'
   }
 ]
 

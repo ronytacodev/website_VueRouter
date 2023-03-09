@@ -1,7 +1,8 @@
 <template>
   <div>
-    <a href="#" class="link">Cursos</a>
-    <a href="#" class="link">Profesores</a>
+    <router-link :to="{ name: 'cursos' }" class="link">Cursos</router-link>
+    <router-link :to="{ name: 'profesores' }" class="link">Profesores</router-link>
+    <router-link :to="{ name: 'alumnos' }" class="link">Alumnos</router-link>
   </div>
 
   <div>
