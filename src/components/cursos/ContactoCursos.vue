@@ -13,8 +13,20 @@
 <script>
 export default {
     name: 'ContactoCursos',
+    data() {
+        return {
+            email: 'rony.taco@developer.com',
+            fullname: ''
+        }
+    },
     props: {
         titulo: String
+    },
+    beforeCreate() {
+        console.log('Función que se ejecuta antes de ser creado')
+        console.log(this.email)
+        console.log(this.$route.params.id)
+        console.log(this.titulo)
     }
 }
 </script>
