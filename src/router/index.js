@@ -8,6 +8,7 @@ import AlumnosB from '@/views/alumnos/AlumnosB'
 import AlumnosC from '@/views/alumnos/AlumnosC'
 import AlumnosD from '@/views/alumnos/AlumnosD'
 import ContactoPage from '@/views/alumnos/ContactoPage'
+import Page404 from '@/views/Page404'
 
 const routes = [
   {
@@ -43,7 +44,8 @@ const routes = [
       { 
         path: 'alumnos-d/:codigo',
         component: AlumnosD,
-        name: 'alumnos-d'
+        name: 'alumnos-d',
+        query: null
       }
     ]
   },
@@ -51,6 +53,10 @@ const routes = [
     path: '/contacto',
     component: ContactoPage,
     name: 'contacto'
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: Page404
   }
 
 ]
