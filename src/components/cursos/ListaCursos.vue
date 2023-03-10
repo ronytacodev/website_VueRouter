@@ -7,6 +7,7 @@
 
 <script>
 
+import axios from 'axios'
 import VLista from '../base/VLista.vue';
 
 export default {
@@ -27,6 +28,19 @@ export default {
             ]
         }
     },
+    methods: {
+        cargarDatos: function () {
+            axios.get('https://servicios.neunapp.com/api/cursos/').then(
+                (response) => {
+                    // console.log(response)
+                    this.lista = response.data.results
+                }
+            )
+        }
+    },
+    beforeMount: function () {
+        this.cargarDatos()
+    }
 
 }
 </script>
