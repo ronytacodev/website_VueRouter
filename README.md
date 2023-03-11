@@ -6,6 +6,7 @@ Let's build website EDUCATECH where we will consume a REST API created by Neunap
 
 * Vue 3 
 * Vue Cli
+* Vue Router
 * Axios
 * Api rest Neunapp
 * Sass
@@ -21,6 +22,8 @@ Let's build website EDUCATECH where we will consume a REST API created by Neunap
 ```
 npm install
 ```
+
+![](src/assets/logo.png)
 
 ### Compiles and hot-reloads for development
 ```
