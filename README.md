@@ -1,4 +1,21 @@
-# website-vuerouter
+# WEBSITE EDUCATECH :school:
+
+Let's build website EDUCATECH where we will consume a REST API created by Neunapp :v: .
+
+## STACK TECH:
+
+* Vue 3 
+* Vue Cli
+* Axios
+* Api rest Neunapp
+* Sass
+
+## Screenshot
+
+![](src/assets//web.jpg)
+
+
+![](src/assets/web2.jpg)
 
 ## Project setup
 ```

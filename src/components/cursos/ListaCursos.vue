@@ -1,7 +1,17 @@
 <template>
-    <div class="cursos">
-        <h3>{{ titulo }}</h3>
-        <v-lista :lista="lista" />
+    <div class="content">
+        <div class="content__cursos">
+            <div>
+                <h3 class="content__cursos__title">{{ titulo }}</h3>
+            </div>
+            <div class="content__cursos__list">
+                <v-lista class="content__cursos__list__element" :lista="lista" />
+            </div>
+        </div>
+
+        <div class="content__image">
+            <img class="content__image__img" src="@/assets/languages.png" alt="">
+        </div>
     </div>
 </template>
 
@@ -46,7 +56,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cursos {
-    border: 1px solid;
+.content {
+    display: flex;
+
+    &__cursos {
+        // border: 1px solid;
+        width: 40%;
+
+        &__title {
+            font-size: 20px;
+            margin-left: 2em;
+            border-bottom: 3px solid blueviolet;
+            width: 200px;
+        }
+
+        &__list {
+            list-style: none;
+
+            &__element {
+                color: black;
+            }
+        }
+    }
+
+    &__image {
+        width: 60%;
+        // border: 1px solid black;
+
+        &__img {
+            width: 600px;
+            height: 400px;
+            padding: 40px;
+            border-radius: 60px;
+        }
+    }
+
 }
 </style>
